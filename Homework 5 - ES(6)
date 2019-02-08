@@ -1,0 +1,190 @@
+
+/* Homework Assignment #5: Switch Statements
+
+
+Details:
+ 
+Create a function called "timeAdder" that can add two time values together. For example, it should be able to add 25 hours and 3 days together. 
+
+The function should accept 4 parameters:
+
+value1, label1, value2, label2
+
+- value1 and value2 should accept positive integers  
+
+- label1 and label2 should accept any of the following strings: "seconds", "minutes", "hours", "days", "second", "minute", "hour", "day"
+
+For example your function may be called in any of the following ways:
+
+timeAdder(1,"minute",3,"minutes")
+
+timeAdder(5,"days",25,"hours")
+
+timeAdder(1,"minute",240,"seconds")
+
+*/
+
+
+function solve([value1,label1,value2,label2]) {
+    let second = 1;
+    let minute = second * 60;
+    let hour = minute * 60;
+    let day = 24 * hour;
+
+
+    switch ( label1 ) {
+
+
+        case 'day':
+            if (value1 === 0 || value1 === 1) {
+                var result1 = value1 * day
+                console.log(result1)
+            } else {
+                console.log('Error!');
+                break;
+            }
+            break;
+        case 'hour':
+            if (value1 === 0 && value1 === 1) {
+                var result1 = value1 * hour
+                console.log( result1)
+            } else {
+                console.log('Error')
+
+            }
+            break;
+        case 'minute':
+            if (value1 === 0 && value1 === 1) {
+                var result1 = value1 * minute
+                console.log(result1)
+            } else {
+                console.log('Error!')
+
+            }
+            break;
+        case 'second':
+            if (value1 === 0 && value1 === 1) {
+                var result1 = value1 * second
+                console.log(result1)
+            } else {
+                console.log('Error!')
+
+            }
+            break;
+            case 'days':
+            if (value1 > 1 || value2 > 1) {
+                var result1 = value1 * day
+                console.log(result1)
+            } else {
+                console.log('Error!')
+            }
+            break;
+        case 'hours':
+            if (value1 > 1 || value2 > 1) {
+                var result1 = value1 * hour
+                console.log(result1)
+            } else {
+                console.log('Error!')
+            }
+            break;
+        case 'minutes':
+            if (value1 > 1 || value2 > 1) {
+                var result1 = value1 * minute
+                console.log(result1)
+            } else {
+                console.log('Error!')
+            }
+            break;
+        case 'seconds':
+            if (value1 > 1 || value2 > 1) {
+                var result1 = value1 * second
+                console.log(result1)
+            } else {
+                console.log('Error!')
+            }
+            break;
+        default:
+            console.log('Part 2')
+    }
+    switch ( label2 ) {
+
+
+        case 'day':
+            if (value2 === 0 || value2 === 1 ) {
+                console.log(value1 * day)
+            } else {
+                console.log('Error!');
+                break;
+            }
+            break;
+        case 'hour':
+            if (value2 === 0 || value2 === 1 ) {
+                console.log(value1 * hour)
+            } else {
+                console.log('Error')
+
+            }
+            break;
+        case 'minute':
+            if (value2 === 0 || value2 === 1) {
+                console.log(value2 * minute)
+            } else {
+                console.log('Error!')
+
+            }
+            break;
+        case 'second':
+            if (value2 === 0 || value2 === 1) {
+                console.log(value1 * second)
+            } else {
+                console.log('Error!')
+
+            }
+            break;
+        case 'days':
+            if (value1 > 1 && value2 > 1) {
+                console.log(value2 * day )
+            } else {
+                console.log('Error!')
+            }
+            break;
+        case 'hours':
+            if (value1 > 1 && value2 > 1) {
+                console.log(value2 * hour)
+            } else {
+                console.log('Error!')
+            }
+            break;
+        case 'minutes':
+            if (value1 > 1 && value2 > 1) {
+                console.log(value2 * minute)
+            } else {
+                console.log('Error!')
+            }
+            break;
+        case 'seconds':
+            if ( value2 > 1) {
+               var result2 = value2 * second;
+                console.log(result2)
+            } else {
+                console.log('Error!')
+            }
+            break;
+        default:
+            console.log('Please write full options ')
+    }
+    console.log(`The result is  ${result1} + ${result2} is` , (result1+result2) + ' ' + 'seconds')
+
+}
+
+
+
+
+solve([2,'days',3,'seconds']); 
+/* The answer is: 
+    172800
+3
+The result is  172800 + 3 is 172803 seconds
+* /
+
+solve([2,'days',3,'seconds']);
